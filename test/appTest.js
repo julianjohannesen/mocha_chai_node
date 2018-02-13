@@ -9,17 +9,21 @@ const add = app.add;
 const subtract = app.subtract;
 const positiveOrNegative = app.positiveOrNegative;
 
-//Refer to Brandon Morelli's article "How to Test JavaScript with Mocha - Basics" https://codeburst.io/how-to-test-javascript-with-mocha-the-basics-80132324752e
+//Brandon Morelli's article "How to Test JavaScript with Mocha - Basics" https://codeburst.io/how-to-test-javascript-with-mocha-the-basics-80132324752e might be helpful as well.
 
 // describe() is a way to group our tests in Mocha. We can also nest our tests as deeply as is necessary. describe() takes two arguments, the first is the name of the test group, and the second is a callback function.
 describe('testing file', () => {
   //it() is used for an individual test case. it() should be written as if you were saying it out loud: “It should equal zero”, “It should log the user in”, etc. it() takes two arguments, a string explaining what the test should do, and a callback function which contains our actual test
   it('is hooked up correctly', () => {
+    //Perform a test to ensure that the required files are present.
+    //"Expect x to equal y" is pretty much just what it sounds like. If x equals y, then your function, or in this case expression, passes the test, otherwise it fails.
     expect(true).to.equal(true);
   });
-  // Here we're nesting another describe() within 'testing file'
+  // Here we're nesting another describe() within 'testing file' to test just our add() function
+  // The # before
   describe('#add function', () => {
     it('adds two numbers correctly', () => {
+      //"results" contains the output of your function
       const results = add(5, 10);
       expect(results).to.equal(15);
     })
