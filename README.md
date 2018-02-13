@@ -1,6 +1,6 @@
 Monday, Feb. 12th, 2018
 
-Jon Foster led a tutorial recently on using Mocha and the Chai assertion library to peform testing.
+Jon Foster led a tutorial recently on using Mocha and the Chai assertion library to perform testing.
 
 Jon quickly walked us through the installation of Mocha and Chai. You can learn more about that here:
 
@@ -45,7 +45,7 @@ Unit testing tools like Mocha, Jasmine, and Tape make unit testing easier.
 
 The point of TDD is to make maitaining code and adding new features easier.
 
-##What is Behavior-Drive Development (BDD)?
+##What is Behavior-Driven Development (BDD)?
 
 "BDD is a set of best practices for writing great tests. BDD can, and should be, used together with TDD and unit testing methods."
 
@@ -77,7 +77,7 @@ touch appTest.js
 ```
 npm init
 ```
-to create a package.json file and when asked for a test command, resond with "mocha". If you already have a package.json file, edit it to add:
+This will create a package.json file. You'll be asked some questions. When asked for a test command, resond with "mocha". If you already have a package.json file, edit it to add:
 ```
 "scripts": {
     "test": "mocha"
@@ -91,10 +91,18 @@ touch app.js
 atom .
 ```
 That final command will open the folder in Atom. 
+When you've added the functions, make sure that you add the following code to the bottom of your file:
+```
+module.exports = {
+  add,
+  subtract,
+  positiveOrNegative
+}
+```
 
 **Step 4**. In Atom open appTest.js. At this point, switch over from the README to following the code comments in appTest.js to re-create that file.
 
-Then run tests with:
+**Step 5**. When you've finished with appTest.js, you can run your test from the command line with:
 ```
 npm test
 ```
