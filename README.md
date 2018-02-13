@@ -2,13 +2,15 @@ Monday, Feb. 12th, 2018
 
 Jon Foster led a tutorial recently on using Mocha and the Chai assertion library to peform testing.
 
-Jon quickly walked us through the installation of Mocha and Chai. you can learn more about that here:
+Jon quickly walked us through the installation of Mocha and Chai. You can learn more about that here:
 
 https://mochajs.org/#installation
 
 and
 
 http://chaijs.com/
+
+Note that you will need to have Node and NPM installed.
 
 ##What is Mocha?
 
