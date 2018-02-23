@@ -7,7 +7,7 @@ function subtract(a, b) {
 }
 
 function positiveOrNegative(num) {
-  if (num > 0) {
+  if (num >= 0) {
     return "positive"
   } else {
     return "negative"

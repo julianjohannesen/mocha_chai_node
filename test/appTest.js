@@ -12,7 +12,7 @@ const positiveOrNegative = app.positiveOrNegative;
 //Brandon Morelli's article "How to Test JavaScript with Mocha - Basics" https://codeburst.io/how-to-test-javascript-with-mocha-the-basics-80132324752e might be helpful as well.
 
 // describe() is a way to group our tests in Mocha. We can also nest our tests as deeply as is necessary. describe() takes two arguments, the first is the name of the test group, and the second is a callback function.
-describe('testing file', () => {
+describe('The testing file', () => {
   //it() is used for an individual test case. it() should be written as if you were saying it out loud: “It should equal zero”, “It should log the user in”, etc. it() takes two arguments, a string explaining what the test should do, and a callback function which contains our actual test
   it('is hooked up correctly', () => {
     //Perform a test to ensure that the required files are present.
@@ -20,28 +20,33 @@ describe('testing file', () => {
     expect(true).to.equal(true);
   });
   // Here we're nesting another describe() within 'testing file' to test just our add() function
-  // The # before
-  describe('#add function', () => {
-    it('adds two numbers correctly', () => {
-      //"results" contains the output of your function
-      const results = add(5, 10);
-      expect(results).to.equal(15);
+  // The # before the function name is required to identify the function
+  describe('The #add function', () => {
+    it('should add two numbers correctly', () => {
+      //Arrange
+      // expectedResult contains the result that we expect to be produced by our function
+      const expectedResult = 15;
+      //Act
+      //actualResult contains the output of your function
+      const actualResult = add(5, 10);
+      //Assert
+      expect(expectedResult).to.equal(actualResult);
     })
   })
 
   describe('#subtract function', () => {
-    it('subtracts two numbers correctly', () => {
+    it('should subtract two numbers correctly', () => {
       const results = subtract(5, 10);
       expect(results).to.equal(-5)
     })
   })
 
   describe('#positiveOrNegative function', () => {
-    it('returns the right answer when positive', () => {
+    it('should return the right answer when positive', () => {
         const results = positiveOrNegative(5);
         expect(results).to.equal("positive");
     });
-    it('returns the right answer when negative', () => {
+    it('should return the right answer when negative', () => {
       const results = positiveOrNegative(-5);
       expect(results).not.to.equal("positive");
     })
